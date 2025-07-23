@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BMDU:App Development</title>
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="container py-4 px-3 mx-auto">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/BMDU logo .png"
+              alt="BMDU logo"
+              style="height: 70px"
+            />
+          </a>
+
+          <!-- Menu -->
+          <div class="collapse text-black navbar-collapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!-- Dropdown: Services -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link fs-5 text-black dropdown-toggle"
+                  href="#"
+                  id="servicesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul
+                  class="dropdown-menu text-black"
+                  aria-labelledby="servicesDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item fs-5 text-black" href="#"
+                      >Web Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item fs-5 text-black" href="#"
+                      >App Development</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item fs-5 text-black" href="#"
+                      >SEO Services</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Dropdown: Agency -->
+              <li class="nav-item text-black dropdown">
+                <a
+                  class="nav-link text-black fs-5 dropdown-toggle"
+                  href="#"
+                  id="agencyDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Agency
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="agencyDropdown">
+                  <li>
+                    <a class="dropdown-item text-black fs-5" href="#"
+                      >Our Team</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-black fs-5" href="#"
+                      >Careers</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Dropdown: Case Study -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-black fs-5 dropdown-toggle"
+                  href="#"
+                  id="caseStudyDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Case Study
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="caseStudyDropdown">
+                  <li>
+                    <a class="dropdown-item text-black fs-5" href="#"
+                      >Project 1</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-black fs-5" href="#"
+                      >Project 2</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Dropdown: Resources -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-black fs-5 dropdown-toggle"
+                  href="#"
+                  id="resourcesDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Resources
+                </a>
+                <ul
+                  class="dropdown-menu text-black"
+                  aria-labelledby="resourcesDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item text-black fs-5" href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-black fs-5" href="#">Guides</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- Contact (No Dropdown) -->
+              <li class="nav-item">
+                <a class="nav-link text-black fs-5" href="#">Contact</a>
+              </li>
+
+              <!-- Design Portfolio Button -->
+              <li class="nav-item ms-3">
+                <a
+                  class="btn btn-outline-secondary fs-5 text-black"
+                  disabled
+                  href="#"
+                  >Design Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hero-Section -->
+      <div class="heroSection">
+        <div class="">
+          <h1 class="mt-5" style="font-size: 5vw">Mobile App Development</h1>
+          <p class="fs-4 px-5 text-center text-muted">
+            Building innovative and userfriendly moile apps tailored to your
+            business needes,ensuring high performance seamless funcntionality
+          </p>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center gap-4">
+          <!-- Button Section -->
+          <button
+            class="fs-4 px-4 py-3 text-white rounded-5 border-0 d-flex align-items-center gap-2"
+            style="background: linear-gradient(to right, #114b87, #1c1248)"
+          >
+            Let's Get Started
+            <span
+              class="bg-white rounded-circle px-2 py-1 d-flex align-items-center justify-content-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </span>
+          </button>
+
+          <!-- User Section -->
+          <div class="d-flex flex-column" style="margin-top: 30px">
+            <div class="d-flex align-items-center justify-content-center gap-2">
+              <div class="fs-2 fw-bold">1.2M</div>
+              <img
+                class="w-25"
+                src="./assets/Group 1272628857.png"
+                alt="users"
+              />
+            </div>
+            <h2 class="fs-5 mt-2 mb-0 text-center">
+              Users already got the app
+            </h2>
+          </div>
+        </div>
+
+        <div class="phone-img mt-5">
+          <img class="w-100" src="./assets//Group 1272628864.png" alt="phone" />
+        </div>
+      </div>
+
+      <!-- TransForm Your Vision with Top-Tier App Development Service -->
+      <div class="bg-black text-white d-flex p-5 rounded-5">
+        <div class="">
+          <h2 class="fs-1 fw-bold">
+            TransForm Your Vision with Top-Tier App Development Service
+          </h2>
+          <p class="fs-3 mt-4 w-100">
+            At BMDU, We brings your ideas to life with cutting-edge technology
+            and innovative solutions. Whether it's Android,iOS, or
+            cross-platform, our expert team ensures your app is not only
+            functional but also scalable and user-friendly.join us to
+            revolutionize ypur bussiness with applications that stand out in the
+            market.
+          </p>
+          <button class="bg-white px-4 py-2 mt-2 rounded-3 fs-4 border-0">
+            Try For Free
+          </button>
+        </div>
+
+        <div class="">
+          <img
+            class="h-100 w-100 rounded-5 object-fit-cover"
+            src="./assets/Rectangle 24458.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Our Experties In Mobile App Development -->
+      <div class="d-flex" style="margin-top: 70px">
+        <div class="w-50">
+          <h1 style="font-size: 4vw">
+            Our Experties In Mobile App Development
+          </h1>
+          <p class="fs-3 text-muted">
+            We craft high-performing mobile apps using the latest technologies
+            like Flutter, React Native, Swift, and Kotlin. From planning and
+            UI/UX design to development and deployment, our agile process
+            ensures fast, scalable, and user-friendly apps. Powered by secure
+            backends like Node.js and Firebase, we bring your app ideas to life
+            — efficiently and beautifully.
+          </p>
+        </div>
+
+        <div class="w-25 px-5 d-flex">
+          <img class="object-fit-cover" src="./assets/bdu2.png" alt="" />
+        </div>
+      </div>
+
+      <!-- Explore The Services -->
+      <div class="mt-5 d-flex flex-column align-items-center">
+        <div
+          class="px-4 py-2 d-flex justify-content-center align-items-center w-25 border border-black rounded-5 gap-3 bg-white"
+        >
+          <img src="./assets//Ellipse 3010.svg" alt="ellips" />
+          <h2 class="fs-3 mt-1">Services</h2>
+        </div>
+        <div class="mt-3">
+          <h1 class="fs-1">Explore The Services</h1>
+        </div>
+        <div class="d-flex gap-5 mt-5 justify-content-center">
+          <div
+            class="w-50 d-flex border border-secondary flex-column align-items-center rounded-4"
+          >
+            <img
+              class="p-3"
+              style="width: 12vw"
+              src="./assets/Android.png"
+              alt="android"
+            />
+            <h2 class="fs-2 text-center">Android App Development</h2>
+            <p class="fs-5 text-muted text-center">
+              Innovative Apps, Built by BMDU – Your Idea, Our Code.
+            </p>
+          </div>
+          <div
+            class="w-50 d-flex border border-secondary flex-column align-items-center justify-content-center rounded-4"
+          >
+            <img
+              class=" "
+              style="width: 12vw"
+              src="./assets/App Store.png"
+              alt="android"
+            />
+            <h2 class="fs-2 text-center mt-3">IOS App Development</h2>
+            <p class="fs-5 text-muted text-center">
+              Build for Apple. Powered by BMDU.
+            </p>
+          </div>
+          <div
+            class="w-50 d-flex shadow border border-secondary flex-column align-items-center justify-content-center rounded-4 p-3"
+          >
+            <img
+              class="p-4"
+              style="width: 12vw"
+              src="./assets/React.png"
+              alt="android"
+            />
+            <h2 class="fs-2 mt-2 text-center">React Nativ App Development</h2>
+            <p class="fs-5 text-muted text-center">
+              One Code. Two Platforms. Infinite Possibilities.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- how it Works -->
+      <div
+        class="d-flex flex-column align-items-center justify align-content-center"
+        style="margin-top: 100px"
+      >
+        <div
+          class="px-4 py-2 d-flex justify-content-center align-items-center w-25 border border-black rounded-5 gap-3 bg-white"
+        >
+          <img src="./assets//Ellipse 3010.svg" alt="ellips" />
+          <h2 class="fs-3 mt-1">How it Works</h2>
+        </div>
+        <div class="mt-5">
+          <h1 class="fs-1">Our Mobile App Development Process</h1>
+        </div>
+
+        <div class="position-relative w-100 mt-5" style="height: 300px">
+          <!-- SVG Wave -->
+          <img
+            src="./assets/Vector 433.svg"
+            alt="wave"
+            class="position-absolute mt-3 top-0 start-50 translate-middle-x w-75"
+          />
+
+          <!-- Card 1 -->
+          <div class="position-absolute" style="-top: 20px; left: 7%">
+            <div class="text-center">
+              <img src="./assets/Frame 1000013890.svg" style="width: 2vw" />
+              <div class="fs-3" style="color: #0475ad">Step 1</div>
+              <p class="fs-6 fw-semibold">Discovery & Strategy</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="position-absolute" style="top: 140px; left: 28%">
+            <div class="text-center">
+              <img src="./assets/Frame 1000013890.svg" style="width: 2vw" />
+              <div class="fs-3" style="color: #0475ad">Step 2</div>
+              <p class="fs-6 fw-semibold">UI/UX Design</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="position-absolute" style="top: 15px; left: 48%">
+            <div class="text-center">
+              <img src="./assets/Frame 1000013890.svg" style="width: 2vw" />
+              <div class="fs-3" style="color: #0475ad">Step 3</div>
+              <p class="fs-6 fw-semibold">Development</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="position-absolute" style="top: 170px; left: 65%">
+            <div class="text-center">
+              <img src="./assets/Frame 1000013890.svg" style="width: 2vw" />
+              <div class="fs-3" style="color: #0475ad">Step 4</div>
+              <p class="fs-6 fw-semibold">Testing & QA</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="position-absolute" style="top: 25px; left: 80%">
+            <div class="text-center">
+              <img src="./assets/Frame 1000013890.svg" style="width: 2vw" />
+              <div class="fs-3" style="color: #0475ad">Step 5</div>
+              <p class="fs-6 fw-semibold">Launch & Development</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent App -->
+  <div class="d-flex flex-column align-items-center " style="margin-top: 100px;">
+      <div
+        class="px-4 py-2 d-flex    align-items-center justify-content-center w-25 border border-black rounded-5 gap-3 bg-white"
+      >
+        <img src="./assets//Ellipse 3010.svg" alt="ellips" />
+        <h2 class="fs-3 mt-1 text-center">Recent</h2>
+      </div>
+      <div class="d-flex gap-5">
+        <div class="mt-5">
+          <h1>Easy to Use Muzique app</h1>
+          <p class="text-muted w-50 fs-6">
+            We build user-friendly, scalable mobile apps tailored to your
+            business goals. Whether for iOS, Android, or both, our apps are
+            designed to perform and grow.
+          </p>
+        <div class="d-flex gap-2 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20"  height="20" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg> 
+            <P>UI/UX-Centric Design for Better Engagement</P>
+          </div>
+          <div  class="d-flex gap-2 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+            <p>High-definition audio quality</p>
+          </div>
+          <div  class="d-flex gap-2 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+          <p>Smart shuffle & seamless transitions</p>
+          </div>
+          <div  class="d-flex gap-2 ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+            Mood-based music recommendations
+          </div>
+        </div>
+        <div class="shadow p-5 rounded-5 w-75 mt-5">
+           <div class=" d-flex justify-content-center ">
+            <img style="width: 18%;" src="./assets/iMockup - Google Pixel 8 Pro.png" alt="mokeup">
+            <img  style="width: 18%;" src="./assets/iMockup - Google Pixel 8 Pro 2.png " alt="mokeup">
+           </div>
+            <div class="d-flex flex-column align-items-center justify-content-center"><h3>MUZIQUE</h3>
+            <p>UI/UX | Mobile App Development</p>
+          <div class="d-flex gap-3">
+            <div class="d-flex gap-3 align-items-center "><img class="object-fit-cover"   style="height: 40px; width: 40px;" src="./assets/google-play_2504916 1.png" alt="google play">
+            <h4 class="fs-5">Google Play</h4></div>
+            <div class="d-flex gap-3 align-items-center"><img   style="height: 40px; width: 40px;" src="./assets/apple_2504884 1.png" alt="apple store">
+            <h4 class="fs-5">Apple Store</h4></div>
+
+          </div></div>
+
+        </div>
+      </div>
+    </div>
+
+      <!-- the right choose for you -->
+      <div
+        class="d-flex justify-content-center flex-column align-items-center"
+        style="margin-top: 90px"
+      >
+        <div
+          class="px-4 py-2 d-flex justify-content-center align-items-center w-25 border border-black rounded-5 gap-3 bg-white"
+        >
+          <img src="./assets//Ellipse 3010.svg" alt="ellips" />
+          <h2 class="fs-3 mt-1">Why Choose Us</h2>
+        </div>
+        <div class="mt-3">
+          <h1 class="fs-1">The Right Choose For You.</h1>
+        </div>
+
+        <div class="mt-2 d-flex gap-3">
+          <!-- left -->
+          <div class="w-50 p-2 d-flex m-2 flex-column rounded-3">
+            <div class="shadow rounded-3 p-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-calendar-days-icon text-primary lucide-calendar-days"
+                s
+              >
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M3 10h18" />
+                <path d="M8 14h.01" />
+                <path d="M12 14h.01" />
+                <path d="M16 14h.01" />
+                <path d="M8 18h.01" />
+                <path d="M12 18h.01" />
+                <path d="M16 18h.01" />
+              </svg>
+
+              <h2 class="fs-3 mt-1">10+ Years of App Development Expertise</h2>
+              <p class="fs-5.1 p-1">
+                With over 10 years of experience, we’ve built apps that are
+                fast, reliable, and tailored to real business needs—across
+                industries and platforms.
+              </p>
+            </div>
+
+            <div class="shadow rounded-3 p-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-command-icon rounded-circle text-primary lucide-command"
+              >
+                <path
+                  d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"
+                />
+              </svg>
+
+              <h2 class="fs-3 mt-1">UI/UX-Focused Development Approach</h2>
+              <p class="fs-5.1 p-1">
+                We prioritize user experience from the start—designing
+                intuitive, visually engaging interfaces that not only look great
+                but make navigation effortless and enjoyable.
+              </p>
+            </div>
+
+            <div class="shadow rounded-3 p-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-truck-electric-icon text-primary lucide-truck-electric"
+              >
+                <path d="M14 19V7a2 2 0 0 0-2-2H9" />
+                <path d="M15 19H9" />
+                <path
+                  d="M19 19h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38a1 1 0 0 0-.78-.38H14"
+                />
+                <path d="M2 13v5a1 1 0 0 0 1 1h2" />
+                <path
+                  d="M4 3 2.15 5.15a.495.495 0 0 0 .35.86h2.15a.47.47 0 0 1 .35.86L3 9.02"
+                />
+                <circle cx="17" cy="19" r="2" />
+                <circle cx="7" cy="19" r="2" />
+              </svg>
+
+              <h2 class="fs-3 mt-1">
+                Transparent Communication & Timely Delivery
+              </h2>
+              <p class="fs-5.1 p-1">
+                We keep you in the loop at every stage, with clear updates and
+                honest timelines— so your project moves forward smoothly and on
+                schedule.
+              </p>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="w-50">
+            <div class="d-flex">
+              <img
+                class="object-fit-cover"
+                src="./assets/bmdu.png"
+                alt="programmer"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
