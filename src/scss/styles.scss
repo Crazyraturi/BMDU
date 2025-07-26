@@ -46,9 +46,8 @@ font-family: "Poppins", sans-serif;
 /* Common Mega Menu Styles */
 .dropdown-menu.mega-menu {
   position: absolute;
-  left: 50%;
+  left:0;
   top: 100%;
-  transform: translateX(-50%);
   background: #fff;
   border: none;
   border-radius: 0;
@@ -90,14 +89,16 @@ font-family: "Poppins", sans-serif;
   color: #0d6efd;
 }
 
+
+
 /* Different widths for each mega menu */
 .services-menu {
-  min-width: 900px;
+  min-width: 700px;
 ;
 }
 
 .location-menu {
-  min-width: 850px;
+  min-width: 700px;
 }
 
 .hire-menu {
@@ -145,5 +146,6 @@ a.dropdown-item:active,
     font-size: 6vw; /* Increase size on small screens */
   }
 }
+
 
 
