@@ -9,8 +9,6 @@ font-family: "Poppins", sans-serif;
 }
 
 
-
-
 .gradient-text {
   background: linear-gradient(to right, #114b87, #1c1248);
   -webkit-background-clip: text;
@@ -25,40 +23,127 @@ font-family: "Poppins", sans-serif;
     color: inherit;
   }
 
-
   .accordion-button:not(.collapsed) {
     background-color: transparent !important;
     box-shadow: none !important;
     color: inherit;
   }
 
-
   .accordion-button {
     border: none;
   }
 
 
-
-html, body {
-  margin: 0;
-  padding: 0;
-  
- 
-}
-
 .footer-bg {
-  width: 100vw; margin-top: 100px;
-  margin-left: calc(-50vw + 50%);
+  width: 100%; margin-top: 100px;
+
   background-image: url('./assets/footer\ Background.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
 }
+/* Common Mega Menu Styles */
+.dropdown-menu.mega-menu {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: none;
+  margin-top: 0;
+  padding: 0;
+  border-radius: 10px;
+}
 
+.mega-menu-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
 
+.mega-menu-container.single-column {
+  grid-template-columns: 1fr;
+  width: 250px;
+}
 
+.mega-column h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #0d6efd;
+}
 
+.mega-column a {
+  display: block;
+  padding: 0.3rem 0;
+  color: #555;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
 
+.mega-column a:hover {
+  color: #0d6efd;
+}
+
+/* Different widths for each mega menu */
+.services-menu {
+  min-width: 900px;
+;
+}
+
+.location-menu {
+  min-width: 850px;
+}
+
+.hire-menu {
+  min-width: 200px;
+}
+
+.industries-menu {
+  min-width: 100px;
+}
+
+/* Hover effect open */
+.navbar-nav li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Remove focus/active blue background */
+a.dropdown-item:focus,
+a.dropdown-item:active,
+.nav-link:focus,
+.nav-link:active {
+  background: transparent !important;
+  color: inherit !important;
+  outline: none !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 991.98px) {
+  .dropdown-menu.mega-menu {
+    position: static;
+    transform: none;
+    min-width: 100% !important;
+  }
+  .mega-menu-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.responsive-heading {
+  font-size: 4vw; /* Desktop - scales with screen width */
+}
+
+/* Mobile-specific adjustment */
+@media (max-width: 576px) {
+  .responsive-heading {
+    font-size: 6vw; /* Increase size on small screens */
+  }
+}
 
 

@@ -7,170 +7,198 @@
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-   
-    <div class="container  px-3 mx-auto">
-      <!-- navbar -->
-      <nav class="navbar navbar-expand-lg px-4">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img
-              src="./assets/BMDU logo .png"
-              alt="BMDU logo"
-              style="height: 70px"
-            />
+    <div class=" mx-auto">
+     <!-- nav-menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid px-5">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="./assets/BMDU logo .png" alt="Logo" style="height: 60px;">
+    </a>
+
+    <!-- Toggle for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto">
+        
+        <!-- Services Mega Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown">
+            Services
           </a>
-
-          <!-- Menu -->
-          <div class="collapse text-black navbar-collapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <!-- Dropdown: Services -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link fs-5 text-black dropdown-toggle"
-                  href="#"
-                  id="servicesDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Services
-                </a>
-                <ul
-                  class="dropdown-menu text-black"
-                  aria-labelledby="servicesDropdown"
-                >
-                  <li>
-                    <a class="dropdown-item fs-5 text-black" href="#"
-                      >Web Development</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item fs-5 text-black" href="#"
-                      >App Development</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item fs-5 text-black" href="#"
-                      >SEO Services</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <!-- Dropdown: Agency -->
-              <li class="nav-item text-black dropdown">
-                <a
-                  class="nav-link text-black fs-5 dropdown-toggle"
-                  href="#"
-                  id="agencyDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Agency
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="agencyDropdown">
-                  <li>
-                    <a class="dropdown-item text-black fs-5" href="#"
-                      >Our Team</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-black fs-5" href="#"
-                      >Careers</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <!-- Dropdown: Case Study -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link text-black fs-5 dropdown-toggle"
-                  href="#"
-                  id="caseStudyDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Case Study
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="caseStudyDropdown">
-                  <li>
-                    <a class="dropdown-item text-black fs-5" href="#"
-                      >Project 1</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-black fs-5" href="#"
-                      >Project 2</a
-                    >
-                  </li>
-                </ul>
-              </li>
-
-              <!-- Dropdown: Resources -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link text-black fs-5 dropdown-toggle"
-                  href="#"
-                  id="resourcesDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Resources
-                </a>
-                <ul
-                  class="dropdown-menu text-black"
-                  aria-labelledby="resourcesDropdown"
-                >
-                  <li>
-                    <a class="dropdown-item text-black fs-5" href="#">Blog</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item text-black fs-5" href="#">Guides</a>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- Contact (No Dropdown) -->
-              <li class="nav-item">
-                <a class="nav-link text-black fs-5" href="#">Contact</a>
-              </li>
-
-              <!-- Design Portfolio Button -->
-              <li class="nav-item ms-3">
-                <a
-                  class="btn btn-outline-secondary fs-5 text-black"
-                  disabled
-                  href="#"
-                  >Design Portfolio</a
-                >
-              </li>
-            </ul>
+          <div class="dropdown-menu mega-menu services-menu">
+            <div class="mega-menu-container">
+              <!-- columns -->
+              <div class="mega-column">
+                <h5>Web Design</h5>
+                <a class="dropdown-item" href="#">Parallax Website</a>
+                <a class="dropdown-item" href="#">Static Website</a>
+                <a class="dropdown-item" href="#">Dynamic Website</a>
+                <a class="dropdown-item" href="#">Business Website</a>
+                <a class="dropdown-item" href="#">Alumni Website</a>
+                <a class="dropdown-item" href="#">Custom Website</a>
+              </div>
+              <div class="mega-column">
+                <h5>Web Development</h5>
+                <a class="dropdown-item" href="#">Ecommerce</a>
+                <a class="dropdown-item" href="#">Core PHP</a>
+                <a class="dropdown-item" href="#">Angular JS</a>
+                <a class="dropdown-item" href="#">React JS</a>
+                <a class="dropdown-item" href="#">Alumni Website</a>
+              </div>
+              <div class="mega-column">
+                <h5>App Development</h5>
+                <a class="dropdown-item" href="#">Android</a>
+                <a class="dropdown-item" href="#">iOS</a>
+                <a class="dropdown-item" href="#">React Native</a>
+              </div>
+              <div class="mega-column">
+                <h5>Graphics Design</h5>
+                <a class="dropdown-item" href="#">Logo Design</a>
+                <a class="dropdown-item" href="#">Flyers & Banners</a>
+                <a class="dropdown-item" href="#">Brochure Design</a>
+                <a class="dropdown-item" href="#">Leaflet Design</a>
+                <a class="dropdown-item" href="#">Visiting Cards</a>
+                <a class="dropdown-item" href="#">Package Design</a>
+              </div>
+              <div class="mega-column">
+                <h5>Digital Marketing</h5>
+                <a class="dropdown-item" href="#">SEO</a>
+                <a class="dropdown-item" href="#">PPC Ads</a>
+                <a class="dropdown-item" href="#">SMO</a>
+                <a class="dropdown-item" href="#">Google My Business</a>
+                <a class="dropdown-item" href="#">ASO</a>
+                <a class="dropdown-item" href="#">ORM</a>
+                <a class="dropdown-item" href="#">Lead Generation</a>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </li>
+
+        <!-- Location Based Services -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="locationServicesDropdown">
+            Location Based Services
+          </a>
+          <div class="dropdown-menu mega-menu location-menu">
+            <div class="mega-menu-container">
+              <div class="mega-column">
+                <h5>India</h5>
+                <a class="dropdown-item" href="#">SEO - Delhi</a>
+                <a class="dropdown-item" href="#">ORM - Delhi</a>
+                <a class="dropdown-item" href="#">Local SEO</a>
+                <a class="dropdown-item" href="#">PPC Services</a>
+              </div>
+              <div class="mega-column">
+                <h5>USA</h5>
+                <a class="dropdown-item" href="#">SEO - California</a>
+                <a class="dropdown-item" href="#">ORM - Dallas</a>
+                <a class="dropdown-item" href="#">SMO - LA</a>
+                <a class="dropdown-item" href="#">SEO - PA</a>
+                <a class="dropdown-item" href="#">PPC - San Diego</a>
+              </div>
+              <div class="mega-column">
+                <h5>UK</h5>
+                <a class="dropdown-item" href="#">SEO - London</a>
+                <a class="dropdown-item" href="#">ORM - Manchester</a>
+                <a class="dropdown-item" href="#">Local SEO</a>
+              </div>
+              <div class="mega-column">
+                <h5>Australia</h5>
+                <a class="dropdown-item" href="#">SEO - Sydney</a>
+                <a class="dropdown-item" href="#">ORM - Melbourne</a>
+                <a class="dropdown-item" href="#">PPC - Perth</a>
+              </div>
+              <div class="mega-column">
+                <h5>Middle East</h5>
+                <a class="dropdown-item" href="#">SEO - Dubai</a>
+                <a class="dropdown-item" href="#">ORM - Qatar</a>
+                <a class="dropdown-item" href="#">Local SEO</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Hire Team (Single column) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="hireTeamDropdown">
+            Hire Team
+          </a>
+          <div class="dropdown-menu mega-menu hire-menu">
+            <div class="mega-menu-container single-column">
+              <div class="mega-column">
+                <a class="dropdown-item" href="#">Hire UI Designer</a>
+                <a class="dropdown-item" href="#">Website Maintenance</a>
+                <a class="dropdown-item" href="#">Digital Marketing Team</a>
+                <a class="dropdown-item" href="#">Social Media Management</a>
+                <a class="dropdown-item" href="#">PR Team</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Industries (Single column) -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown">
+            Industries
+          </a>
+          <div class="dropdown-menu mega-menu industries-menu">
+            <div class="mega-menu-container single-column">
+              <div class="mega-column">
+                <h5>Industries</h5>
+                <a class="dropdown-item" href="#">Accounting</a>
+                <a class="dropdown-item" href="#">Biotech</a>
+                <a class="dropdown-item" href="#">Healthcare</a>
+                <a class="dropdown-item" href="#">Financial</a>
+                <a class="dropdown-item" href="#">Engineering</a>
+                <a class="dropdown-item" href="#">Hospitalities</a>
+                <a class="dropdown-item" href="#">Retail</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- About & Contact -->
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+      </ul>
+
+      <!-- Design Portfolio Button (Mobile view inside menu) -->
+      <div class="d-lg-none text-center mt-3">
+        <button class="btn border-black p-3 w-100">Design Portfolio</button>
+      </div>
+    </div>
+
+    <!-- Design Portfolio Button (Desktop view right side) -->
+    <div class="d-none d-lg-block">
+      <button class="btn border-black p-3">Design Portfolio</button>
+    </div>
+  </div>
+</nav>
+
 
       <!-- hero-Section -->
-      <div class="heroSection container mt-3 text-center">
+      <div class="heroSection mt-3 text-center container">
         <!-- Heading -->
-        <h1 class="mt-5" style="font-size: 6vw">Mobile App Development</h1>
+        <h1 class="mt-5 responsive-heading ">Mobile App Development</h1>
 
         <!-- Paragraph -->
-        <p class="fs-5 px-3 px-md-5 text-muted">
+        <p class="fs-5 fs-md-5 px-3 px-md-5 text-muted">
           Building innovative and user-friendly mobile apps tailored to your
           business needs, ensuring high performance and seamless functionality.
         </p>
 
         <!-- Action & Stats Section -->
         <div
-          class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 mt-4"
+          class="d-flex flex-column mt-5 flex-md-row align-items-center justify-content-center gap-4 mt-4"
         >
           <!-- Button Section -->
           <button
-            class="fs-5 px-4 py-3 text-white rounded-5 border-0 d-flex align-items-center gap-2"
+            class="fs-6 fs-md-5 px-4 py-3 text-white rounded-5 border-0 d-flex align-items-center gap-2"
             style="background: linear-gradient(to right, #114b87, #1c1248)"
           >
             Let's Get Started
@@ -195,24 +223,24 @@
           </button>
 
           <!-- User Stats -->
-          <div class="d-flex flex-column align-items-center mt-md-4 mt-2">
+          <div class="d-flex flex-column align-items-center mt-3 mt-md-0">
             <div class="d-flex align-items-center gap-2">
-              <div class="fs-2 fw-bold">1.2M</div>
+              <div class="fs-3 fs-md-2 fw-bold">1.2M</div>
               <img
                 class="img-fluid"
-                style="width: 110px"
+                style="width: 100px"
                 src="./assets/Group 1272628857.png"
                 alt="users"
               />
             </div>
-            <h2 class="fs-6 mt-2 mb-0 text-center">
+            <h2 class="fs-6 mt-2 mb-0 text-center text-muted">
               Users already got the app
             </h2>
           </div>
         </div>
 
         <!-- Phone Image -->
-        <div class="mt-5">
+        <div class="" style="margin-top: 50px">
           <img
             class="img-fluid"
             src="./assets/Group 1272628864.png"
@@ -222,14 +250,16 @@
       </div>
 
       <!-- TransForm Your Vision with Top-Tier App Development Service -->
-      <div class="container mt-5">
-        <div class="row bg-black text-white p-5 rounded-5 align-items-center">
+      <div class="mt-5 container">
+        <div
+          class="row bg-black text-white p-4 p-md-5 rounded-5 align-items-center"
+        >
           <!-- Text Section -->
           <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-            <h2 class="fw-bold display-4 display-lg-1">
-              TransForm Your Vision with Top-Tier App Development Service
+            <h2 class="fw-bold display-5 display-md-3 display-lg-2">
+              Transform Your Vision with Top-Tier App Development Service
             </h2>
-            <p class="fs-5 mt-3">
+            <p class="fs-6 fs-md-5 mt-3">
               At BMDU, we bring your ideas to life with cutting-edge technology
               and innovative solutions. Whether it's Android, iOS, or
               cross-platform, our expert team ensures your app is not only
@@ -237,7 +267,7 @@
               revolutionize your business with applications that stand out in
               the market.
             </p>
-            <button class="btn btn-light px-4 py-2 mt-3 fs-5 rounded-3">
+            <button class="btn btn-light px-4 py-2 mt-3 fs-6 fs-md-5 rounded-3">
               Try For Free
             </button>
           </div>
@@ -247,21 +277,22 @@
             <img
               src="./assets/Rectangle 24458.jpg"
               alt="App Development Banner"
-              class="img-fluid rounded-5 w-100 h-100 object-fit-cover"
+              class="img-fluid rounded-5 w-100"
+              style="object-fit: cover; max-height: 400px"
             />
           </div>
         </div>
       </div>
 
       <!-- Our Experties In Mobile App Development -->
-      <div class="container mt-5">
+      <div class="mt-5 container">
         <div class="row align-items-center">
           <!-- Text Section -->
           <div class="col-12 col-lg-8 mb-4 mb-lg-0">
-            <h1 class="" style="font-size: 4vw">
+            <h1 class="display-5 fw-semibold display-md-4 display-lg-3">
               Our Expertise In Mobile App Development
             </h1>
-            <p class="fs-5 text-muted mt-3">
+            <p class="fs-5 fs-md-5 text-muted mt-3">
               We craft high-performing mobile apps using the latest technologies
               like Flutter, React Native, Swift, and Kotlin. From planning and
               UI/UX design to development and deployment, our agile process
@@ -272,19 +303,19 @@
           </div>
 
           <!-- Image Section -->
-          <div class="col-12 col-lg-4 text-center">
+          <div class="col-12 col-lg-4 text-center mt-5">
             <img
               src="./assets/bdu2.png"
               alt="Mobile App Development"
-              class="img-fluid object-fit-cover"
-              style="max-height: 300px"
+              class="img-fluid rounded-4"
+              style="max-height: 400px; object-fit: cover"
             />
           </div>
         </div>
       </div>
 
       <!-- Explore The Services -->
-      <div class="container mt-5 d-flex flex-column align-items-center">
+      <div class="mt-5 d-flex flex-column align-items-center">
         <!-- Badge Heading -->
         <div
           class="px-4 py-2 d-flex justify-content-center align-items-center border border-black rounded-5 gap-3 bg-white"
@@ -299,7 +330,7 @@
         </div>
 
         <!-- Services Cards -->
-        <div class="row mt-5 gx-4 gy-4 justify-content-center">
+        <div class="row mt-3 gx-4 gy-4 justify-content-center">
           <!-- Android App -->
           <div class="col-12 col-md-6 col-lg-4">
             <div
@@ -355,516 +386,475 @@
       </div>
 
       <!-- how it Works -->
-      <div class="container mt-5 d-flex flex-column align-items-center">
-        <!-- Title badge -->
-        <div
-          class="px-4 py-2 d-flex justify-content-center align-items-center border border-black rounded-5 gap-3 bg-white"
-        >
-          <img src="./assets/Ellipse 3010.svg" alt="ellips" />
-          <h2 class="fs-4 mt-1">How it Works</h2>
-        </div>
+   <div class="mt-5 d-flex flex-column align-items-center container">
+  <!-- Title badge -->
+  <div
+    class="px-4 py-2 d-flex justify-content-center align-items-center border border-black rounded-5 gap-3 bg-white"
+  >
+    <img src="./assets/Ellipse 3010.svg" alt="ellips" />
+    <h2 class="fs-4 mt-1">How it Works</h2>
+  </div>
 
-        <!-- Section Heading -->
-        <div class="mt-4 text-center">
-          <h1 class="fs-1">Our Mobile App Development Process</h1>
-        </div>
+  <!-- Section Heading -->
+  <div class="mt-4 text-center">
+    <h1 class="fs-1">Our Mobile App Development Process</h1>
+  </div>
 
-        <!-- Desktop View: Horizontal Timeline -->
-        <div
-          class="position-relative w-100 mt-5 d-none d-md-block"
-          style="height: 320px"
-        >
-          <!-- SVG Wave -->
-          <img
-            src="./assets/Vector 433.svg"
-            alt="wave"
-            class="position-absolute top-0 start-50 translate-middle-x w-75"
-          />
+  <!-- Desktop View: Horizontal Timeline -->
+  <div
+    class="position-relative w-100 mt-5 d-none d-md-block"
+    style="height: 340px"
+  >
+    <!-- SVG Wave -->
+    <img
+      src="./assets/Vector 433.svg"
+      alt="wave"
+      class="position-absolute top-0 start-50 translate-middle-x w-75"
+    />
 
-          <!-- Cards (steps) -->
-          <div class="position-absolute" style="top: -15px; left: 7%">
-            <div class="text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
-              <div class="fs-5" style="color: #0475ad">Step 1</div>
-              <p class="fs-6 fw-semibold">Discovery & Strategy</p>
-            </div>
-          </div>
+    <!-- Steps -->
+    <div class="position-absolute text-center" style="top: -20px; left: 7%">
+      <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
+      <div class="fs-5 text-primary">Step 1</div>
+      <p class="fs-6  mb-0">Discovery & Strategy</p>
+    </div>
 
-          <div class="position-absolute" style="top: 100px; left: 28%">
-            <div class="text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
-              <div class="fs-5" style="color: #0475ad">Step 2</div>
-              <p class="fs-6 fw-semibold">UI/UX Design</p>
-            </div>
-          </div>
+    <div class="position-absolute text-center" style="top: 110px; left: 28%">
+      <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
+      <div class="fs-5 text-primary">Step 2</div>
+      <p class="fs-6  mb-0">UI/UX Design</p>
+    </div>
 
-          <div class="position-absolute" style="top: 0px; left: 48%">
-            <div class="text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
-              <div class="fs-5" style="color: #0475ad">Step 3</div>
-              <p class="fs-6 fw-semibold">Development</p>
-            </div>
-          </div>
+    <div class="position-absolute text-center" style="top: -10px; left: 48%">
+      <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
+      <div class="fs-5 text-primary">Step 3</div>
+      <p class="fs-6  mb-0">Development</p>
+    </div>
 
-          <div class="position-absolute" style="top: 130px; left: 65%">
-            <div class="text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
-              <div class="fs-5" style="color: #0475ad">Step 4</div>
-              <p class="fs-6 fw-semibold">Testing & QA</p>
-            </div>
-          </div>
+    <div class="position-absolute text-center" style="top: 140px; left: 65%">
+      <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
+      <div class="fs-5 text-primary">Step 4</div>
+      <p class="fs-6  mb-0">Testing & QA</p>
+    </div>
 
-          <div class="position-absolute" style="top: 10px; left: 81%">
-            <div class="text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
-              <div class="fs-5" style="color: #0475ad">Step 5</div>
-              <p class="fs-6 fw-semibold">Launch & Deployment</p>
-            </div>
-          </div>
-        </div>
+    <div class="position-absolute text-center" style="top: 10px; left: 81%">
+      <img src="./assets/Frame 1000013890.svg" style="width: 3vw" />
+      <div class="fs-5 text-primary">Step 5</div>
+      <p class="fs-6 mb-0">Launch & Deployment</p>
+    </div>
+  </div>
 
-        <!-- Mobile View: Vertical Steps -->
-        <div class="d-md-none mt-5 w-100">
-          <div class="row row-cols-1 g-4">
-            <!-- Step 1 -->
-            <div class="col text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 10vw" />
-              <div class="fs-5" style="color: #0475ad">Step 1</div>
-              <p class="fs-6 fw-semibold">Discovery & Strategy</p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="col text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 10vw" />
-              <div class="fs-5" style="color: #0475ad">Step 2</div>
-              <p class="fs-6 fw-semibold">UI/UX Design</p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="col text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 10vw" />
-              <div class="fs-5" style="color: #0475ad">Step 3</div>
-              <p class="fs-6 fw-semibold">Development</p>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="col text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 10vw" />
-              <div class="fs-5" style="color: #0475ad">Step 4</div>
-              <p class="fs-6 fw-semibold">Testing & QA</p>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="col text-center">
-              <img src="./assets/Frame 1000013890.svg" style="width: 10vw" />
-              <div class="fs-5" style="color: #0475ad">Step 5</div>
-              <p class="fs-6 fw-semibold">Launch & Deployment</p>
-            </div>
-          </div>
-        </div>
+  <!-- Mobile View: Vertical Steps -->
+  <div class="d-md-none mt-5 w-100">
+    <div class="row row-cols-1 g-4 text-center">
+      <div class="col">
+        <img src="./assets/Frame 1000013890.svg" style="width: 12vw" />
+        <div class="fs-5 text-primary">Step 1</div>
+        <p class="fs-6 fw-semibold">Discovery & Strategy</p>
       </div>
+
+      <div class="col">
+        <img src="./assets/Frame 1000013890.svg" style="width: 12vw" />
+        <div class="fs-5 text-primary">Step 2</div>
+        <p class="fs-6 fw-semibold">UI/UX Design</p>
+      </div>
+
+      <div class="col">
+        <img src="./assets/Frame 1000013890.svg" style="width: 12vw" />
+        <div class="fs-5 text-primary">Step 3</div>
+        <p class="fs-6 fw-semibold">Development</p>
+      </div>
+
+      <div class="col">
+        <img src="./assets/Frame 1000013890.svg" style="width: 12vw" />
+        <div class="fs-5 text-primary">Step 4</div>
+        <p class="fs-6 fw-semibold">Testing & QA</p>
+      </div>
+
+      <div class="col">
+        <img src="./assets/Frame 1000013890.svg" style="width: 12vw" />
+        <div class="fs-5 text-primary">Step 5</div>
+        <p class="fs-6 fw-semibold">Launch & Deployment</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- Recent App -->
-      <div class="container mt-5 d-flex flex-column align-items-center">
-        <!-- Heading -->
-        <div
-          class="px-4 py-2 d-flex border border-black rounded-5 gap-3 bg-white"
+     <div class="mt-5 d-flex flex-column align-items-center container">
+  <!-- Heading -->
+  <div
+    class="px-4 py-2 d-flex border border-black rounded-5 gap-3 bg-white text-center"
+  >
+    <img src="./assets/Ellipse 3010.svg" alt="ellips" />
+    <h2 class="fs-4 mt-1">Recent</h2>
+  </div>
+
+  <!-- Content Block -->
+  <div class="row mt-5 align-items-center justify-content-center gy-5 gx-3">
+    <!-- Left Arrow Button (hidden on small screens) -->
+    <div class="col-auto d-none d-md-block">
+      <button class="p-2 border border-black rounded-5 bg-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-          <img src="./assets/Ellipse 3010.svg" alt="ellips" />
-          <h2 class="fs-4 mt-1 text-center">Recent</h2>
-        </div>
+          <path d="m12 19-7-7 7-7" />
+          <path d="M19 12H5" />
+        </svg>
+      </button>
+    </div>
 
-        <!-- Content Block -->
-        <div
-          class="row mt-5 align-items-center justify-content-center gy-5 gx-3"
-        >
-          <!-- Left Arrow Button -->
-          <div class="col-auto d-none d-md-block">
-            <div class="p-2 border border-black rounded-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-left"
-              >
-                <path d="m12 19-7-7 7-7" />
-                <path d="M19 12H5" />
-              </svg>
-            </div>
-          </div>
+    <!-- Text Content -->
+    <div class="col-12 col-lg-5 text-center text-lg-start px-3">
+      <h2 class="fs-3 fs-md-2">Easy to Use Muzique App</h2>
+      <p class="text-muted fs-6">
+        We build user-friendly, scalable mobile apps tailored to your business goals. Whether for iOS, Android, or both, our apps are designed to perform and grow.
+      </p>
 
-          <!-- Text Content -->
-          <div class="col-12 col-lg-5">
-            <h2>Easy to Use Muzique app</h2>
-            <p class="text-muted fs-6">
-              We build user-friendly, scalable mobile apps tailored to your
-              business goals. Whether for iOS, Android, or both, our apps are
-              designed to perform and grow.
-            </p>
-
-            <!-- Feature List -->
-            <div class="d-flex gap-2 mb-2">
-              <svg
-                width="20"
-                height="20"
-                stroke="blue"
-                fill="none"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-check"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <p class="mb-0">UI/UX-Centric Design for Better Engagement</p>
-            </div>
-
-            <div class="d-flex gap-2 mb-2">
-              <svg
-                width="20"
-                height="20"
-                stroke="blue"
-                fill="none"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-check"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <p class="mb-0">High-definition audio quality</p>
-            </div>
-
-            <div class="d-flex gap-2 mb-2">
-              <svg
-                width="20"
-                height="20"
-                stroke="blue"
-                fill="none"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-check"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <p class="mb-0">Smart shuffle & seamless transitions</p>
-            </div>
-
-            <div class="d-flex gap-2">
-              <svg
-                width="20"
-                height="20"
-                stroke="blue"
-                fill="none"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-check"
-              >
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
-              <p class="mb-0">Mood-based music recommendations</p>
-            </div>
-          </div>
-
-          <!-- App Mockup and Store Info -->
-          <div class="col-12 col-lg-5 shadow p-4 rounded-5">
-            <div class="d-flex justify-content-center gap-3 mb-3">
-              <img
-                class="img-fluid"
-                style="max-width: 30%"
-                src="./assets/iMockup - Google Pixel 8 Pro.png"
-                alt="mockup"
-              />
-              <img
-                class="img-fluid"
-                style="max-width: 28%"
-                src="./assets/iMockup - Google Pixel 8 Pro 2.png"
-                alt="mockup"
-              />
-            </div>
-
-            <div class="text-center">
-              <h3>MUZIQUE</h3>
-              <p class="mb-3">UI/UX | Mobile App Development</p>
-
-              <div class="d-flex justify-content-center gap-4">
-                <div class="d-flex gap-2 align-items-center">
-                  <img
-                    src="./assets/google-play_2504916 1.png"
-                    alt="google play"
-                    style="height: 40px; width: 40px"
-                  />
-                  <h4 class="fs-6 mb-0">Google Play</h4>
-                </div>
-
-                <div class="d-flex gap-2 align-items-center">
-                  <img
-                    src="./assets/apple_2504884 1.png"
-                    alt="apple store"
-                    style="height: 40px; width: 40px"
-                  />
-                  <h4 class="fs-6 mb-0">Apple Store</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Arrow Button -->
-          <div class="col-auto d-none d-md-block">
-            <div class="p-2 border border-black rounded-5">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="black"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-right"
-              >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- the right choose for you -->
-      <div class="container mt-5">
-        <!-- Title Section -->
-        <div class="d-flex flex-column align-items-center text-center">
-          <div
-            class="px-4 py-2 d-flex justify-content-center align-items-center border border-black rounded-5 gap-3 bg-white"
-          >
-            <img src="./assets/Ellipse 3010.svg" alt="ellips" />
-            <h2 class="fs-3 mt-1">Why Choose Us</h2>
-          </div>
-          <h1 class="fs-1 mt-3">The Right Choice For You.</h1>
-        </div>
-
-        <!-- Content Section -->
-        <div class="row mt-4 gx-4 gy-4 align-items-center">
-          <!-- Left Column: Feature Cards -->
-          <div class="col-12 col-md-6 d-flex flex-column gap-4">
-            <!-- Card 1 -->
-            <div class="shadow rounded-3 p-4 h-100">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                class="text-primary mb-2"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M8 2v4" />
-                <path d="M16 2v4" />
-                <rect width="18" height="18" x="3" y="4" rx="2" />
-                <path d="M3 10h18" />
-                <path d="M8 14h.01" />
-                <path d="M12 14h.01" />
-                <path d="M16 14h.01" />
-                <path d="M8 18h.01" />
-                <path d="M12 18h.01" />
-                <path d="M16 18h.01" />
-              </svg>
-              <h2 class="fs-4">10+ Years of App Development Expertise</h2>
-              <p class="fs-6 text-muted">
-                With over 10 years of experience, we’ve built apps that are
-                fast, reliable, and tailored to real business needs—across
-                industries and platforms.
-              </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="shadow rounded-3 p-4 h-100">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                class="text-primary mb-2"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"
-                />
-              </svg>
-              <h2 class="fs-4">UI/UX-Focused Development Approach</h2>
-              <p class="fs-6 text-muted">
-                We prioritize user experience from the start—designing
-                intuitive, visually engaging interfaces that not only look great
-                but make navigation effortless.
-              </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="shadow rounded-3 p-4 h-100">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="30"
-                class="text-primary mb-2"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M14 19V7a2 2 0 0 0-2-2H9" />
-                <path d="M15 19H9" />
-                <path
-                  d="M19 19h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38a1 1 0 0 0-.78-.38H14"
-                />
-                <path d="M2 13v5a1 1 0 0 0 1 1h2" />
-                <path
-                  d="M4 3 2.15 5.15a.495.495 0 0 0 .35.86h2.15a.47.47 0 0 1 .35.86L3 9.02"
-                />
-                <circle cx="17" cy="19" r="2" />
-                <circle cx="7" cy="19" r="2" />
-              </svg>
-              <h2 class="fs-4">Transparent Communication & Timely Delivery</h2>
-              <p class="fs-6 text-muted">
-                We keep you in the loop at every stage, with clear updates and
-                honest timelines—so your project moves forward smoothly and on
-                schedule.
-              </p>
-            </div>
-          </div>
-
-          <!-- Right Column: Image -->
-          <div class="col-12 col-md-6">
-            <img
-              src="./assets/bmdu.png"
-              class="img-fluid rounded"
-              alt="programmer"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- why choose us  -->
-      <div
-        class="container mt-5 d-flex flex-column align-items-center justify-content-center"
-      >
-        <!-- Heading -->
-        <div
-          class="px-4 py-2 d-flex justify-content-center align-items-center border border-black rounded-5 gap-3 bg-white mb-3"
-        >
-          <img src="./assets//Ellipse 3010.svg" alt="ellips" />
-          <h2 class="fs-3 mt-1">Why Choose Us</h2>
-        </div>
-
-        <h1 class="fs-1 text-center mb-5">Mobile Application Portfolio.</h1>
-
-        <!-- Portfolio Grid -->
-        <div class="row g-4 w-100 justify-content-center">
-          <div
-            class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
-          >
-            <img
-              src="./assets/Rectangle 24460.png"
-              class="img-fluid rounded-5"
-              alt="To-do App"
-            />
-            <h4 class="text-center mt-3 fs-5">
-              To-do | Mobile App Development
-            </h4>
-          </div>
-          <div
-            class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
-          >
-            <img
-              src="./assets/Rectangle 24461.png"
-              class="img-fluid rounded-5"
-              alt="Education App"
-            />
-            <h4 class="text-center mt-3 fs-5">
-              Education | Mobile App Development
-            </h4>
-          </div>
-          <div
-            class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
-          >
-            <img
-              src="./assets/Rectangle 24462.png"
-              class="img-fluid rounded-5"
-              alt="Fitness App"
-            />
-            <h4 class="text-center mt-3 fs-5">
-              Fitness | Mobile App Development
-            </h4>
-          </div>
-        </div>
-
-        <!-- View All Projects Button -->
-        <div
-          class="px-4 py-2 d-flex mt-4 justify-content-center align-items-center border border-black rounded-5 gap-2 bg-white"
-        >
-          <h2 class="fs-5 mt-1 mb-0">View All Projects</h2>
+      <!-- Feature List -->
+      <div class="d-flex flex-column gap-2 align-items-start">
+        <div class="d-flex gap-2">
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="20"
+            stroke="blue"
             fill="none"
-            stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-arrow-right"
           >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
+            <path d="M20 6 9 17l-5-5" />
           </svg>
+          <p class="mb-0">UI/UX-Centric Design for Better Engagement</p>
+        </div>
+
+        <div class="d-flex gap-2">
+          <svg width="20" height="20" stroke="blue" fill="none" stroke-width="2">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+          <p class="mb-0">High-definition audio quality</p>
+        </div>
+
+        <div class="d-flex gap-2">
+          <svg width="20" height="20" stroke="blue" fill="none" stroke-width="2">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+          <p class="mb-0">Smart shuffle & seamless transitions</p>
+        </div>
+
+        <div class="d-flex gap-2">
+          <svg width="20" height="20" stroke="blue" fill="none" stroke-width="2">
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+          <p class="mb-0">Mood-based music recommendations</p>
         </div>
       </div>
+    </div>
+
+    <!-- App Mockup and Store Info -->
+    <div class="col-12 col-lg-5 shadow p-4 rounded-5">
+      <div class="d-flex justify-content-center gap-3 mb-3 flex-wrap">
+        <img
+          class="img-fluid"
+          style="max-width: 45%"
+          src="./assets/iMockup - Google Pixel 8 Pro.png"
+          alt="mockup"
+        />
+        <img
+          class="img-fluid"
+          style="max-width: 45%"
+          src="./assets/iMockup - Google Pixel 8 Pro 2.png"
+          alt="mockup"
+        />
+      </div>
+
+      <div class="text-center">
+        <h3 class="fs-4">MUZIQUE</h3>
+        <p class="mb-3 fs-6">UI/UX | Mobile App Development</p>
+
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="./assets/google-play_2504916 1.png"
+              alt="google play"
+              style="height: 35px; width: 35px"
+            />
+            <h4 class="fs-6 mb-0">Google Play</h4>
+          </div>
+
+          <div class="d-flex gap-2 align-items-center">
+            <img
+              src="./assets/apple_2504884 1.png"
+              alt="apple store"
+              style="height: 35px; width: 35px"
+            />
+            <h4 class="fs-6 mb-0">Apple Store</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Arrow Button (hidden on small screens) -->
+    <div class="col-auto d-none d-md-block">
+      <button class="p-2 border border-black rounded-5 bg-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+      <!-- the right choose for you -->
+      <div class="mt-5 container">
+  <!-- Title Section -->
+  <div class="d-flex flex-column align-items-center text-center">
+    <div
+      class="px-4 py-2 d-flex justify-content-center align-items-center border border-black rounded-5 gap-3 bg-white shadow-sm"
+    >
+      <img src="./assets/Ellipse 3010.svg" alt="ellips" class="img-fluid" style="width: 15px;" />
+      <h2 class="fs-5 fs-md-3 mt-1 mb-0">Why Choose Us</h2>
+    </div>
+    <h1 class="fs-3 fs-md-1 mt-3">The Right Choice For You.</h1>
+  </div>
+
+  <!-- Content Section -->
+  <div class="row mt-4 gx-4 gy-4 align-items-center">
+    <!-- Left Column: Feature Cards -->
+    <div class="col-12 col-md-6 d-flex flex-column gap-4">
+      <!-- Card 1 -->
+      <div class="shadow rounded-3 p-4 h-100">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          class="text-primary mb-2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M8 2v4" />
+          <path d="M16 2v4" />
+          <rect width="18" height="18" x="3" y="4" rx="2" />
+          <path d="M3 10h18" />
+          <path d="M8 14h.01" />
+          <path d="M12 14h.01" />
+          <path d="M16 14h.01" />
+          <path d="M8 18h.01" />
+          <path d="M12 18h.01" />
+          <path d="M16 18h.01" />
+        </svg>
+        <h2 class="fs-5 fs-md-4">10+ Years of App Development Expertise</h2>
+        <p class="fs-6 text-muted">
+          With over 10 years of experience, we’ve built apps that are fast,
+          reliable, and tailored to real business needs—across industries and
+          platforms.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="shadow rounded-3 p-4 h-100">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          class="text-primary mb-2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"
+          />
+        </svg>
+        <h2 class="fs-5 fs-md-4">UI/UX-Focused Development Approach</h2>
+        <p class="fs-6 text-muted">
+          We prioritize user experience from the start—designing intuitive,
+          visually engaging interfaces that not only look great but make
+          navigation effortless.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="shadow rounded-3 p-4 h-100">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          class="text-primary mb-2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M14 19V7a2 2 0 0 0-2-2H9" />
+          <path d="M15 19H9" />
+          <path
+            d="M19 19h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62L18.3 9.38a1 1 0 0 0-.78-.38H14"
+          />
+          <path d="M2 13v5a1 1 0 0 0 1 1h2" />
+          <path
+            d="M4 3 2.15 5.15a.495.495 0 0 0 .35.86h2.15a.47.47 0 0 1 .35.86L3 9.02"
+          />
+          <circle cx="17" cy="19" r="2" />
+          <circle cx="7" cy="19" r="2" />
+        </svg>
+        <h2 class="fs-5 fs-md-4">Transparent Communication & Timely Delivery</h2>
+        <p class="fs-6 text-muted">
+          We keep you in the loop at every stage, with clear updates and honest
+          timelines—so your project moves forward smoothly and on schedule.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="col-12 col-md-6 text-center">
+      <img
+        src="./assets/bmdu.png"
+        class="img-fluid "
+        alt="programmer"
+      />
+    </div>
+  </div>
+</div>
+
+
+      <!-- why choose us  -->
+     <div class="mt-5 d-flex flex-column align-items-center justify-content-center container">
+  <!-- Heading -->
+  <div
+    class="px-4 py-2 d-flex justify-content-center align-items-center border border-black rounded-5 gap-3 bg-white mb-3 shadow-sm"
+  >
+    <img src="./assets/Ellipse 3010.svg" alt="ellips" class="img-fluid" style="width: 15px;" />
+    <h2 class="fs-4 fs-md-3 mt-1 mb-0">Why Choose Us</h2>
+  </div>
+
+  <h1 class="fs-2 fs-md-1 text-center mb-5">
+    Mobile Application Portfolio.
+  </h1>
+
+  <!-- Portfolio Grid -->
+  <div class="row g-4 w-100 justify-content-center">
+    <div
+      class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+    >
+      <img
+        src="./assets/Rectangle 24460.png"
+        class="img-fluid rounded-5 shadow-sm"
+        alt="To-do App"
+      />
+      <h4 class="text-center mt-3 fs-6 fs-md-5">
+        To-do | Mobile App Development
+      </h4>
+    </div>
+    <div
+      class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+    >
+      <img
+        src="./assets/Rectangle 24461.png"
+        class="img-fluid rounded-5 shadow-sm"
+        alt="Education App"
+      />
+      <h4 class="text-center mt-3 fs-6 fs-md-5">
+        Education | Mobile App Development
+      </h4>
+    </div>
+    <div
+      class="col-12 col-sm-6 col-lg-4 d-flex flex-column align-items-center"
+    >
+      <img
+        src="./assets/Rectangle 24462.png"
+        class="img-fluid rounded-5 shadow-sm"
+        alt="Fitness App"
+      />
+      <h4 class="text-center mt-3 fs-6 fs-md-5">
+        Fitness | Mobile App Development
+      </h4>
+    </div>
+  </div>
+
+  <!-- View All Projects Button -->
+  <div
+    class="px-4 py-2 d-flex mt-4 justify-content-center align-items-center border border-black rounded-5 gap-2 bg-white shadow-sm"
+    style="cursor: pointer;"
+  >
+    <h2 class="fs-6 fs-md-5 mt-1 mb-0">View All Projects</h2>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  </div>
+</div>
+
 
       <div class="container mt-5">
         <!-- Heading -->
-        <h2 class="text-center fw-medium" style="font-size: 5vw">
+        <h2 class="text-center fw-medium display-6 display-md-5 display-lg-4">
           What Makes Us The Best
-          <span class="gradient-text">Mobile App</span> Development Company
+          <span class="text-primary">Mobile App</span> Development Company
         </h2>
 
         <!-- Subheading -->
-        <p class="fs-5 text-center text-muted mt-3">
+        <p class="fs-6 fs-md-5 text-center text-muted mt-3">
           We stand out as the best Mobile App development company due to our
           deep technical expertise and commitment to delivering tailor-made
           solutions.
         </p>
 
         <!-- Image -->
-        <div class="w-100 mt-4 text-center">
+        <div class=" mt-4 text-center">
           <img
             src="./assets/bmdu3.png"
             class="img-fluid rounded"
             alt="Mobile Development Image"
+            style="max-width: 100%; height: auto"
           />
         </div>
       </div>
 
       <!-- get in touch -->
-      <div class="container mt-5 text-center">
+      <div class="mt-5 text-center">
         <!-- Headings -->
-        <h2 class="fw-medium" style="font-size: 5vw">
-          Ready to build a mobile app your users will love?
-        </h2>
+        <h2 class="fw-medium fs-1 ">
+  Ready to build a mobile app your users will love?
+</h2>
+
+        
         <h3 class="mt-3 fs-4">
           Tell us your idea, and we’ll turn it into a stunning website.
         </h3>
@@ -897,11 +887,11 @@
       </div>
 
       <!--  FAQ-->
-      <section class=" ">
+      <section class="py-5">
         <div class="container">
-          <h2 class="" style="font-size: 5vw; margin-top: 100px">FAQs</h2>
+          <h2 class="text-center mb-5" style="font-size: 4vw">FAQs</h2>
 
-          <div class="accordion mt-5" id="faqAccordion">
+          <div class="accordion" id="faqAccordion">
             <!-- FAQ 1 -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -910,6 +900,8 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
                 >
                   Who can be a part of the referral partner program?
                 </button>
@@ -934,6 +926,8 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
                 >
                   How often is the commission paid?
                 </button>
@@ -958,6 +952,8 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
                 >
                   Are there any exemptions or exclusions?
                 </button>
@@ -982,6 +978,8 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
                 >
                   What kind of leads is KiwiTech looking for?
                 </button>
@@ -1006,6 +1004,8 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
                 >
                   When will I get my first payment?
                 </button>
@@ -1030,6 +1030,8 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
                 >
                   How many leads can I refer to KiwiTech?
                 </button>
@@ -1054,6 +1056,8 @@
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
                 >
                   How long is the referral program for?
                 </button>
@@ -1074,12 +1078,11 @@
       </section>
 
       <!-- footer -->
-      
-      <div class="footer-bg ">
-       
-        <footer class="pt-5  ">
+
+      <div class="footer-bg">
+        <footer class="pt-5">
           <!-- Top CTA Section -->
-          <div class="container mb-5 p-5">
+          <div class="mb-5 p-5">
             <div
               class="row align-items-center justify-content-between text-center text-md-start"
             >
@@ -1115,7 +1118,7 @@
           </div>
 
           <!-- Main Footer Content -->
-          <div class="container p-5">
+          <div class="p-5">
             <div class="row text-white text-center text-md-start">
               <!-- Column 1: Logo and Description -->
               <div class="col-md-3 mb-4">
@@ -1343,10 +1346,7 @@
             <small>&copy; 2025 BMDU. All rights reserved.</small>
           </div>
         </footer>
-        
       </div>
-    
     </div>
-    
   </body>
 </html>
