@@ -1,64 +1,16 @@
 import '../scss/styles.scss'
 import * as bootstrap from 'bootstrap'
 
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Select all dropdowns
-    const dropdowns = document.querySelectorAll(".navbar .dropdown");
-
-    dropdowns.forEach(function (dropdown) {
-      dropdown.addEventListener("mouseenter", function () {
-        const menu = this.querySelector(".dropdown-menu");
-        const toggle = this.querySelector(".dropdown-toggle");
-        if (menu && toggle) {
-          menu.classList.add("show");
-          toggle.setAttribute("aria-expanded", "true");
-        }
-      });
-
-      dropdown.addEventListener("mouseleave", function () {
-        const menu = this.querySelector(".dropdown-menu");
-        const toggle = this.querySelector(".dropdown-toggle");
-        if (menu && toggle) {
-          menu.classList.remove("show");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    });
-  });
-
-document.querySelector('.navbar-toggler').addEventListener('click', function () {
-  document.body.classList.toggle('menu-open');
-});
-
-
- document.addEventListener("DOMContentLoaded", function () {
-    const closeBtn = document.getElementById("closeNavbar");
-    const navbar = document.getElementById("mainNavbar");
-    const toggler = document.querySelector(".navbar-toggler");
-
-    // Close button click
-    closeBtn?.addEventListener("click", function () {
-      navbar.classList.remove("show");
-      document.body.classList.remove("menu-open");
-    });
-
-    // When toggler opens menu
-    toggler?.addEventListener("click", function () {
-      document.body.classList.add("menu-open");
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll(".navbar .dropdown");
   const toggler = document.querySelector(".navbar-toggler");
   const navbar = document.getElementById("mainNavbar");
   const closeBtn = document.getElementById("closeNavbar");
 
-  // Desktop hover functionality
+  // Desktop hover open/close
   dropdowns.forEach(function (dropdown) {
     dropdown.addEventListener("mouseenter", function () {
-      if (window.innerWidth > 991) {  // Only desktop
+      if (window.innerWidth > 991) {
         const menu = this.querySelector(".dropdown-menu");
         const toggle = this.querySelector(".dropdown-toggle");
         if (menu && toggle) {
@@ -69,7 +21,7 @@ document.querySelector('.navbar-toggler').addEventListener('click', function () 
     });
 
     dropdown.addEventListener("mouseleave", function () {
-      if (window.innerWidth > 991) { // Only desktop
+      if (window.innerWidth > 991) {
         const menu = this.querySelector(".dropdown-menu");
         const toggle = this.querySelector(".dropdown-toggle");
         if (menu && toggle) {
@@ -78,26 +30,45 @@ document.querySelector('.navbar-toggler').addEventListener('click', function () 
         }
       }
     });
+  });
 
-    // Mobile click toggle (open/close)
+  // Mobile dropdown click toggle
+  dropdowns.forEach((dropdown) => {
     const toggleLink = dropdown.querySelector(".dropdown-toggle");
+
     toggleLink.addEventListener("click", function (e) {
       if (window.innerWidth <= 991) {
-        e.preventDefault(); // stop link redirect
+        e.preventDefault();
         const menu = dropdown.querySelector(".dropdown-menu");
-        menu.classList.toggle("show");
+        const isOpen = menu.classList.contains("show");
+
+        // Close all dropdowns first
+        dropdowns.forEach((d) => {
+          d.querySelector(".dropdown-menu")?.classList.remove("show");
+        });
+
+        // Toggle current one
+        if (!isOpen) {
+          menu.classList.add("show");
+        }
       }
     });
   });
 
-  // Mobile toggler slide-in
+  // Mobile navbar toggler
   toggler?.addEventListener("click", function () {
     document.body.classList.add("menu-open");
   });
 
-  // Close button
+  // Close button (mobile)
   closeBtn?.addEventListener("click", function () {
     navbar.classList.remove("show");
     document.body.classList.remove("menu-open");
+
+    // Close all dropdowns too
+    dropdowns.forEach((d) => {
+      d.querySelector(".dropdown-menu")?.classList.remove("show");
+    });
   });
 });
+ 
