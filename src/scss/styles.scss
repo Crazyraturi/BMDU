@@ -226,7 +226,8 @@ a.dropdown-item:active,
 
         .stats-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;   
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; 
             gap: 30px;
             max-width: 600px;
             width: 100%;
@@ -264,7 +265,7 @@ a.dropdown-item:active,
         .stat-number {
             font-size: 3.5rem;
             font-weight: bold;
-            color: #1e3a8a;
+            color: #0c4a6e;
             margin-bottom: 10px;
             line-height: 1;
         }
@@ -333,7 +334,12 @@ a.dropdown-item:active,
         .stat-card {
             animation: fadeInUp 0.6s ease forwards;
         }
+           
 
+        .stat-card:nth-child(2) {
+            /* Target the "Years" card specifically */
+          transform: translateY(200px);
+        }
         .stat-card:nth-child(1) { animation-delay: 0.1s; display: flex; flex-direction: column;  align-items: center ; justify-content: center; }
         .stat-card:nth-child(2) { animation-delay: 0.2s; }
         .stat-card:nth-child(3) { animation-delay: 0.3s;  }
