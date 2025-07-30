@@ -115,14 +115,14 @@ a.dropdown-item:active,
 }
 
 .hover-arrow::after {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='blue' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8L22 12L18 16'/><path d='M2 12H22'/></svg>");
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='blue' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-arrow-right-icon lucide-arrow-right'><path d='M5 12h14'/><path d='m12 5 7 7-7 7'/></svg>");
   position: absolute;
-  left: -9.5%;
   top: 60%;
   transform: translateY(-50%) translateX(-50%);
   opacity: 0;
   transition: all 0.3s ease;
 }
+
 
 .hover-arrow:hover::after {
   opacity: 1;
@@ -226,7 +226,7 @@ a.dropdown-item:active,
 
         .stats-container {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 2fr 1fr 3fr;
             grid-template-rows: 1fr 1fr 1fr; 
             gap: 30px;
             max-width: 600px;
