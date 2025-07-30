@@ -1,6 +1,7 @@
 @import "bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* ---------- GLOBAL RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +9,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Gradient text utility */
+/* ---------- UTILITIES ---------- */
 .gradient-text {
   background: linear-gradient(to right, #114b87, #1c1248);
   -webkit-background-clip: text;
@@ -16,25 +17,19 @@
   display: inline-block;
 }
 
-/* Accordion fixes */
-.accordion-button:hover,
-.accordion-button:focus {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  color: inherit;
+/* ---------- ACCORDION FIX ---------- */
+.accordion-button {
+  border: none;
 }
-
+.accordion-button:hover,
+.accordion-button:focus,
 .accordion-button:not(.collapsed) {
   background-color: transparent !important;
   box-shadow: none !important;
   color: inherit;
 }
 
-.accordion-button {
-  border: none;
-}
-
-/* Mega menu dropdown */
+/* ---------- MEGA MENU (Desktop) ---------- */
 .dropdown-menu.mega-menu {
   position: absolute;
   left: 50%;
@@ -51,7 +46,6 @@
   overflow-x: auto;
 }
 
-/* Mega menu container */
 .mega-menu-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -83,29 +77,18 @@
   color: #0d6efd;
 }
 
-/* Different widths for each mega menu */
-.services-menu {
-  min-width: 700px;
-}
+/* Mega menu widths */
+.services-menu { min-width: 700px; }
+.location-menu { min-width: 600px; }
+.hire-menu { min-width: 300px; }
+.industries-menu { min-width: 150px; }
 
-.location-menu {
-  min-width: 600px;
-}
-
-.hire-menu {
-  min-width: 300px;
-}
-
-.industries-menu {
-  min-width: 150px;
-}
-
-/* Hover effect for desktop */
+/* Desktop Hover open */
 .navbar-nav li.dropdown:hover > .dropdown-menu {
   display: block;
 }
 
-/* Remove blue background on active/focus */
+/* Remove focus styles */
 a.dropdown-item:focus,
 a.dropdown-item:active,
 .nav-link:focus,
@@ -115,78 +98,55 @@ a.dropdown-item:active,
   outline: none !important;
 }
 
-/* Responsive heading utility */
-.responsive-heading {
-  font-size: 4vw;
+/* ---------- NAVBAR ---------- */
+.navbar-nav .nav-link {
+  font-size: 15px;
+  font-weight: 500;
 }
 
-@media (max-width: 576px) {
-  .responsive-heading {
-    font-size: 6vw;
-  }
+/* ---------- HOVER ARROW ---------- */
+.hover-arrow {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-/* -------------- MOBILE NAVBAR SLIDE-IN --------------- */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hide initially */
-    width: 80%;
-    height: 100%;
-    background: #fff;
-    padding: 1.5rem;
-    transition: right 0.4s ease-in-out;
-    box-shadow: -3px 0 15px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-    z-index: 1050;
-  }
-
-  /* Show menu on open */
-  .navbar-collapse.show {
-    right: 0;
-  }
-
-  /* Disable body scroll when menu open */
-  body.menu-open {
-    overflow: hidden;
-  }
-
-  /* Make text smaller */
-  .navbar-nav .nav-link {
-    font-size: 0.9rem;
-    padding: 0.6rem 0;
-  }
-
-  .mega-column a {
-    font-size: 0.8rem;
-  }
-
-  .mega-column h5 {
-    font-size: 0.9rem;
-  }
-
-  /* Mega menu vertical stack */
-  .dropdown-menu.mega-menu {
-    position: static;
-    transform: none;
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: none;
-  }
-
-  .mega-menu-container {
-    grid-template-columns: 1fr !important;
-    gap: 1rem;
-  }
+.hover-arrow::after {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='blue' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8L22 12L18 16'/><path d='M2 12H22'/></svg>");
+  position: absolute;
+  left: -9.5%;
+  top: 60%;
+  transform: translateY(-50%) translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
+.hover-arrow:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* ---------- NAVBAR TOGGLER ---------- */
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler:hover {
+  background: transparent;
+}
+
+/* ---------- MOBILE NAVBAR SLIDE-IN (< 992px) ---------- */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 85%; /* moved slightly left */
+    width: 85%;
     height: 100%;
     background: #fff;
     padding: 1.5rem 1rem;
@@ -200,36 +160,20 @@ a.dropdown-item:active,
     right: 0;
   }
 
+  body.menu-open {
+    overflow: hidden;
+  }
+
   .navbar-nav .nav-link {
     font-size: 0.9rem;
     padding: 0.6rem 0.5rem;
-    white-space: normal; /* allow text to wrap */
+    white-space: normal;
   }
 
   .mega-menu-container {
-    padding-left: 0.5rem;
-  }
-
-  .btn-close {
-    font-size: 1.2rem;
-  }
-}
-
-.navbar-nav .nav-link {
-  font-size: 15px; /* smaller text size */
-  font-weight: 500; /* optional for better readability */
-  // padding: 0.5rem 0.8rem; /* adjust padding if needed */
-}
-
-/* ----------- MOBILE STYLING (< 992px) ----------- */
-@media (max-width: 991.98px) {
-  /* Remove fixed width in mobile */
-  .services-menu,
-  .location-menu,
-  .hire-menu,
-  .industries-menu {
-    min-width: unset;
-    width: 100%;
+    grid-template-columns: 1fr !important;
+    padding: 1rem;
+    gap: 1rem;
   }
 
   .dropdown-menu.mega-menu {
@@ -249,128 +193,32 @@ a.dropdown-item:active,
     display: block;
   }
 
-  /* Mega menu columns stack */
-  .mega-menu-container {
-    grid-template-columns: 1fr !important;
-    gap: 1rem;
-    padding: 1rem;
+  /* Mega menu widths reset */
+  .services-menu,
+  .location-menu,
+  .hire-menu,
+  .industries-menu {
+    min-width: unset;
+    width: 100%;
   }
-}
-.custom-control {
-  width: 60px;
-  height: 60px;
-  background: white;
-  border: 2px solid black;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 1;
+
+  .mega-column a { font-size: 0.8rem; }
+  .mega-column h5 { font-size: 0.9rem; }
 }
 
-.carousel-control-prev {
-  left: -10px; /* Move outside container */
-}
-
-.carousel-control-next {
-  right: -10px; /* Move outside container */
-}
-
-.custom-control:hover {
-  background: rgb(60, 58, 58);
-}
-
-.custom-control:hover .custom-arrow svg {
-  stroke: white;
-}
-
-.custom-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 2px;
-  margin-top: 5px;
-  margin-left: 5px;
-}
-
-/* Default size (desktop) */
-.mega-column h5 {
-  font-size: 0.9rem;
-}
-
-.mega-column a {
-  font-size: 0.85rem;
-}
-
-/* Medium screens (tablets) */
+/* ---------- FONT RESIZE ON MEDIUM (< 1278px) ---------- */
 @media (max-width: 1278px) {
-  .mega-column h5 {
-    font-size: 0.7rem;
-  }
-  .mega-column a {
-    font-size: 0.7rem;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 12px; /* smaller text size */
-    font-weight: 500; /* optional for better readability */
-    // padding: 0.5rem 0.8rem; /* adjust padding if needed */
-  }
+  .mega-column h5 { font-size: 0.7rem; }
+  .mega-column a { font-size: 0.7rem; }
+  .navbar-nav .nav-link { font-size: 12px; }
 }
 
-/* Small screens (mobile) */
+/* ---------- FONT RESIZE ON SMALL (< 768px & < 576px) ---------- */
 @media (max-width: 768px) {
-  .mega-column h5 {
-    font-size: 0.8rem;
-  }
-  .mega-column a {
-    font-size: 0.75rem;
-  }
+  .mega-column h5 { font-size: 0.8rem; }
+  .mega-column a { font-size: 0.75rem; }
 }
-
-/* Extra small screens */
 @media (max-width: 576px) {
-  .mega-column h5 {
-    font-size: 0.75rem;
-  }
-  .mega-column a {
-    font-size: 0.7rem;
-  }
+  .mega-column h5 { font-size: 0.75rem; }
+  .mega-column a { font-size: 0.7rem; }
 }
-
-.hover-arrow {
-  position: relative;
-  display: inline-block;
-  padding-right: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.hover-arrow::after {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='blue' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8L22 12L18 16'/><path d='M2 12H22'/></svg>");
-  position: absolute;
-  
-  left:-9.5%;
-  top: 60%;
-  transform: translateY(-50%) translateX(-50%);
-  opacity: 0;
-  transition: all 0.3s ease;
-  
-}
-
-.hover-arrow:hover::after {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-}
-.navbar-toggler {
-  border: none;        /* border remove */
-  box-shadow: none;    /* click hone par jo shadow aata hai wo bhi hatao */
-  outline: none;       /* focus outline remove */
-}
-
-.navbar-toggler:hover {
-  background: transparent; /* hover background bhi remove */
-}
-

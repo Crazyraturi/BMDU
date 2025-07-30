@@ -1,5 +1,5 @@
-import '../scss/styles.scss'
-import * as bootstrap from 'bootstrap'
+import '../scss/styles.scss';
+import * as bootstrap from 'bootstrap';
 
 document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll(".navbar .dropdown");
@@ -7,68 +7,87 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("mainNavbar");
   const closeBtn = document.getElementById("closeNavbar");
 
-  // Desktop hover open/close
+  // ---------- Desktop hover open/close ----------
   dropdowns.forEach(function (dropdown) {
     dropdown.addEventListener("mouseenter", function () {
       if (window.innerWidth > 991) {
         const menu = this.querySelector(".dropdown-menu");
-        const toggle = this.querySelector(".dropdown-toggle");
-        if (menu && toggle) {
-          menu.classList.add("show");
-          toggle.setAttribute("aria-expanded", "true");
-        }
+        menu?.classList.add("show");
+        this.classList.add("open");
       }
     });
 
     dropdown.addEventListener("mouseleave", function () {
       if (window.innerWidth > 991) {
         const menu = this.querySelector(".dropdown-menu");
-        const toggle = this.querySelector(".dropdown-toggle");
-        if (menu && toggle) {
-          menu.classList.remove("show");
-          toggle.setAttribute("aria-expanded", "false");
-        }
+        menu?.classList.remove("show");
+        this.classList.remove("open");
       }
     });
   });
 
-  // Mobile dropdown click toggle
+  // ---------- Mobile dropdown toggle ----------
   dropdowns.forEach((dropdown) => {
     const toggleLink = dropdown.querySelector(".dropdown-toggle");
+    const menu = dropdown.querySelector(".dropdown-menu");
 
     toggleLink.addEventListener("click", function (e) {
       if (window.innerWidth <= 991) {
         e.preventDefault();
-        const menu = dropdown.querySelector(".dropdown-menu");
         const isOpen = menu.classList.contains("show");
 
-        // Close all dropdowns first
+        // Close all menus first
         dropdowns.forEach((d) => {
           d.querySelector(".dropdown-menu")?.classList.remove("show");
+          d.classList.remove("open");
         });
 
         // Toggle current one
         if (!isOpen) {
           menu.classList.add("show");
+          dropdown.classList.add("open");
         }
       }
     });
   });
 
-  // Mobile navbar toggler
+  // ---------- Close if clicked outside ----------
+  document.addEventListener("click", function (e) {
+    if (window.innerWidth <= 991 && !e.target.closest(".dropdown") && !e.target.closest(".navbar-toggler")) {
+      dropdowns.forEach((d) => {
+        d.querySelector(".dropdown-menu")?.classList.remove("show");
+        d.classList.remove("open");
+      });
+    }
+  });
+
+  // ---------- Mobile navbar toggler ----------
   toggler?.addEventListener("click", function () {
+   
     document.body.classList.add("menu-open");
   });
 
-  // Close button (mobile)
+  // ---------- Close button (mobile) ----------
   closeBtn?.addEventListener("click", function () {
     navbar.classList.remove("show");
     document.body.classList.remove("menu-open");
 
-    // Close all dropdowns too
+    // Close all dropdowns
     dropdowns.forEach((d) => {
       d.querySelector(".dropdown-menu")?.classList.remove("show");
+      d.classList.remove("open");
     });
   });
+
+  // ---------- Reset when resizing ----------
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 991) {
+      navbar.classList.remove("show");
+      document.body.classList.remove("menu-open");
+      dropdowns.forEach((d) => {
+        d.querySelector(".dropdown-menu")?.classList.remove("show");
+        d.classList.remove("open");
+      });
+    }
+  });
 });
- 
