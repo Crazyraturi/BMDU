@@ -364,4 +364,13 @@ a.dropdown-item:active,
   opacity: 1;
   transform: translateY(-50%) translateX(0);
 }
+.navbar-toggler {
+  border: none;        /* border remove */
+  box-shadow: none;    /* click hone par jo shadow aata hai wo bhi hatao */
+  outline: none;       /* focus outline remove */
+}
+
+.navbar-toggler:hover {
+  background: transparent; /* hover background bhi remove */
+}
 
