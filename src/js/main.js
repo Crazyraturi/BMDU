@@ -91,3 +91,76 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+ let hasAnimated = false; // Prevent multiple animations
+
+        // Counter animation function
+        function animateCounter(element, target, suffix = '') {
+            let current = 0;
+            const increment = target / 100; // Adjust speed by changing denominator
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.innerHTML = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    element.innerHTML = Math.floor(current) + suffix;
+                }
+            }, 20); // Adjust timing for smoother/faster animation
+        }
+
+        // Function to start the counter animation
+        function startCounterAnimation() {
+            if (hasAnimated) return; // Prevent re-animation
+            
+            hasAnimated = true;
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            statNumbers.forEach((element, index) => {
+                const target = parseInt(element.getAttribute('data-target'));
+                const suffix = element.querySelector('span').textContent;
+                
+                // Clear the initial content
+                element.innerHTML = '0' + suffix;
+                
+                // Start animation with slight delay for each card
+                setTimeout(() => {
+                    animateCounter(element, target, suffix);
+                }, index * 100);
+            });
+        }
+
+        // Intersection Observer to detect when section comes into view
+        const observerOptions = {
+            threshold: 0.5, // Trigger when 50% of the section is visible
+            rootMargin: '0px 0px -50px 0px' // Trigger slightly before fully in view
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounterAnimation();
+                    // Optional: Stop observing after first trigger
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Start observing when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsContainer = document.querySelector('.stats-container');
+            observer.observe(statsContainer);
+        });
+
+        // Optional: Reset and restart animation on double-click (for testing)
+        document.addEventListener('dblclick', () => {
+            hasAnimated = false;
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            statNumbers.forEach(element => {
+                const suffix = element.querySelector('span').textContent;
+                element.innerHTML = '0' + suffix;
+            });
+            
+            startCounterAnimation();
+        });
